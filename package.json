@@ -1,0 +1,66 @@
+{
+  "name": "@borderlessdev/filecoin-storage-sdk",
+  "version": "1.0.0",
+  "description": "Comprehensive Filecoin storage SDK with Synapse integration. Simplifies decentralized file storage on Filecoin with wallet management, upload/download, and IPFS pinning.",
+  "main": "dist/FileStorage.umd.js",
+  "module": "dist/FileStorage.esm.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "build:dev": "rollup -c --environment NODE_ENV:development",
+    "test": "node examples/test.js",
+    "prepublishOnly": "npm run build && npm test",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "filecoin",
+    "ipfs",
+    "decentralized-storage",
+    "web3-storage",
+    "synapse-sdk",
+    "blockchain",
+    "dapp",
+    "storage-sdk",
+    "file-upload",
+    "web3",
+    "usdfc",
+    "pinata"
+  ],
+  "author": "Nworah Chimzuruoke Gabriel <gabrielnworah@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nworah-Gabriel/filecoin-storage-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nworah-Gabriel/filecoin-storage-sdk/issues"
+  },
+  "homepage": "https://github.com/Nworah-Gabriel/filecoin-storage-sdk#readme",
+  "files": [
+    "dist/**/*",
+    "examples/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@filoz/synapse-sdk": "^0.24.11",
+    "dotenv": "^17.2.2",
+    "ethers": "^6.15.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "rollup": "^2.79.2",
+    "rollup-plugin-node-polyfills": "^0.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
