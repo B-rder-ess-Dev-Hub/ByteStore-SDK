@@ -1,20 +1,14 @@
 {
-    "title": "My Data",
-    "content": "This is stored on Filecoin!",
-    "timestamp": "",
-    "title": "My Data",
-    "content": "This is stored on Filecoin!",
-    "timestamp": "",
-    "title": "My Data",
-    "content": "This is stored on Filecoin!",
-    "timestamp": "",
-    "title": "My Data",
-    "content": "This is stored on Filecoin!",
-    "timestamp": "",
-    "title": "My Data",
-    "content": "This is stored on Filecoin!",
-    "timestamp": "",
-    "title": "My Data",
-    "content": "This is stored on Filecoin!",
-    "timestamp": ""
+  "test": "Filecoin Storage SDK Test Data",
+  "timestamp": "2025-09-15T04:48:38.517Z",
+  "description": "This is a test file for the Filecoin Storage SDK",
+  "items": [
+    "item1",
+    "item2",
+    "item3"
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "Test Suite"
+  }
 }

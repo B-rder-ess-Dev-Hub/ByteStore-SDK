@@ -16,7 +16,7 @@ A comprehensive JavaScript/TypeScript SDK for decentralized file storage on File
 ## Installation
 
 ```bash
-npm install @borderlessDev/filecoin-storage-sdk
+npm install @borderlessdev/filecoin-storage-sdk
 ```
 
 # Quickstart
@@ -24,7 +24,7 @@ npm install @borderlessDev/filecoin-storage-sdk
 ## nodejs usage
 
 ```javascript
-import fileStorage from '@BorderlessDev/filecoin-storage-sdk';
+import fileStorage from '@borderlessdev/filecoin-storage-sdk';
 import { config } from "dotenv";
 import fs from 'fs';
 import path from 'path';

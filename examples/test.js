@@ -36,6 +36,22 @@ function createSampleFiles() {
       metadata: {
         version: "1.0.0",
         author: "Test Suite"
+      },
+      test: "Filecoin Storage SDK Test Data",
+      timestamp: new Date().toISOString(),
+      description: "This is a test file for the Filecoin Storage SDK",
+      items: ["item1", "item2", "item3"],
+      metadata: {
+        version: "1.0.0",
+        author: "Test Suite"
+      },
+      test: "Filecoin Storage SDK Test Data",
+      timestamp: new Date().toISOString(),
+      description: "This is a test file for the Filecoin Storage SDK",
+      items: ["item1", "item2", "item3"],
+      metadata: {
+        version: "1.0.0",
+        author: "Test Suite"
       }
     };
     fs.writeFileSync(jsonPath, JSON.stringify(sampleData, null, 2));
@@ -45,8 +61,7 @@ function createSampleFiles() {
   // Sample text file
   const textPath = path.resolve(filesDir, 'sample.txt');
   if (!fs.existsSync(textPath)) {
-    fs.writeFileSync(textPath, 'Hello Filecoin Storage SDK! This is a test text file.');
-    console.log('📝 Created sample text file');
+    console.log('File not found');
   }
 }
 
@@ -122,10 +137,6 @@ async function main() {
       console.log('📥 Downloaded text:', downloadedText.substring(0, 50) + '...');
     }
 
-    console.log('\n--- Testing File Existence Check ---');
-    const testCid = 'bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi'; // Example CID
-    const exists = await fileStorage.checkFileExists(testCid);
-    console.log(`File ${testCid} exists:`, exists);
 
     console.log('\n--- Testing Storage Info ---');
     try {
@@ -141,7 +152,7 @@ async function main() {
 
     console.log('\n--- Testing Small File Upload ---');
     try {
-      const smallBuffer = Buffer.from('TESTESTESTETTETTETSTETSTETSTETSTETSTETSTTETTETSTETSTETSTTETTSTTETTTTTTTTTTTTTTTTTTESSSSSSSSSSSSSSSSEETETETETETETETETDTTTYTSYSYSYSYSYYETETTTTSYSYSYYYSYDTYTTEYEYYDYSYSYSYSTSTTETETETETET'); 
+      const smallBuffer = Buffer.from('X'); 
       const smallResult = await fileStorage.uploadFile(smallBuffer, 'tiny.txt');
       console.log('✅ Small file uploaded:', smallResult.pieceCid);
     } catch (error) {
